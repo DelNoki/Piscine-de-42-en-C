@@ -140,9 +140,9 @@ char *ft_conv_base(char *nb, char *base_from, char *base_to)
 #include <stdio.h>
 int main(void)
 {
-    char *test = "-7";
+    char *test = "778";
     char *base_from = "0123456789";
-    char *base_to = "01";
+    char *base_to = "012";
     printf(ft_conv_base(test, base_from, base_to));
     /*
     int n = ft_atoi(test, base_from);

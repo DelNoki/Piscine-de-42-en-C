@@ -61,6 +61,8 @@ void afficher(int tab[N][N])
             c = tab[i][j] + '0';
             write(1, &c, 1);
             j++;
+            if (j < N)
+                write(1, " ", 1);
         }
         write(1, "\n", 1);
         i++;
