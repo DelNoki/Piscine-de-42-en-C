@@ -52,6 +52,8 @@ char *ft_strdup(char *src, int index, int size)
     char *dest;
     int i = 0;
     dest = (char *)malloc(sizeof(char) * (size + 1));
+    if (!dest)
+        return (NULL);
     while (i < size)
     {
         dest[i] = src[index + i];
