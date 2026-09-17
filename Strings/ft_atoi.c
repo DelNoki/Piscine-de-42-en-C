@@ -3,7 +3,7 @@ int ft_atoi(char *nb)
 	int i = 0;
 	int tot = 0;
     int minus = 0;
-    while (nb[i] == ' ')
+    while (nb[i] == ' ' || (nb[i] >= 9 && nb[i] <= 13))
         i++;
     while (nb[i] == '+' || nb[i] == '-')
     {
@@ -19,4 +19,14 @@ int ft_atoi(char *nb)
     if (minus % 2 != 0)
         tot *= -1;
 	return (tot);
+}
+
+#include <stdio.h>
+int main(int n, char **c)
+{
+    if (n == 2)
+    {
+        printf("%d\n", ft_atoi(c[1]));
+    }
+    return (0);
 }
