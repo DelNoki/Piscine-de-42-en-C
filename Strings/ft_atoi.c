@@ -11,14 +11,16 @@ int ft_atoi(char *nb)
             minus++;
         i++;
     }
-	while(nb[i] >= '0' && nb[i] <= '9')
+	while (nb[i] >= '0' && nb[i] <= '9')
 	{
 		tot = tot * 10 + nb[i] - '0';
 		i++;
 	}
     if (minus % 2 != 0)
-        tot *= -1;
-	return (tot);
+    {
+        tot = -tot;
+    }
+	return(tot);
 }
 
 #include <stdio.h>
